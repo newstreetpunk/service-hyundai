@@ -18,6 +18,8 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 .slider
 	position: relative
 	margin-top: 80px
+	@include media-breakpoint-down(sm)
+		margin-top: 60px
 	&-form
 		max-width: 400px
 		width: 100%

@@ -6,39 +6,77 @@
 	top: 35px
 	left: 0
 	width: 100%
-	z-index: 10
-	&-logo
-		img
-			width: 220px
+	z-index: 100
+	@include media-breakpoint-down(lg)
+		top: 78px
+	@include media-breakpoint-down(sm)
+		top: 0
+	.container
+		@include media-breakpoint-down(xl)
+			max-width: 100%
+	.btn
+		@include media-breakpoint-down(lg)
+			font-size: 13px
+			padding: 10px 20px
 	&-wrap
 		display: flex
 		justify-content: space-between
 		align-items: center
 		height: 80px
+		@include media-breakpoint-down(sm)
+			height: 60px
+	&-logo
+		img
+			width: 220px
+			@include media-breakpoint-down(xl)
+				width: 180px
+			@include media-breakpoint-down(lg)
+				width: 150px
+			@media (max-width: 400px)
+				width: 120px
+	&-phone
+		font-size: 22px
+		@include media-breakpoint-down(xl)
+			font-size: 18px
+		@include media-breakpoint-down(lg)
+			font-size: 16px
+		img
+			@media (max-width: 400px)
+				display: none
+		a
+			color: $text
+			&:hover
+				color: $accent
+	&-menu
+		@include media-breakpoint-down(lg)
+			display: none
+		li
+			list-style: none
+			margin: 0 5px
+			a
+				position: relative
+				color: $text
+				font-weight: 500
+				&:after
+					content: ''
+					position: absolute
+					left: 0
+					top: 100%
+					width: 100%
+					height: 2px
+					background-color: $accent
+					transition: all .25s ease
+					opacity: 0
+					transform: translateY(4px)
+				&:hover
+					color: $accent
+					&:after
+						opacity: 1
+						transform: translateY(0)
 	&-right
 		display: inline-block
 		vertical-align: middle
 		a
 			display: block
-	&-phones
-		display: flex
-	.phone
-		display: inline-block
-		vertical-align: middle
-		margin-right: 24px
-		&:last-child()
-			margin-right: 0
-		a:hover
-			color: $text	
-		img
-			width: 35px
-			height: 100%
-			margin-right: 5px
-			display: inline-block
-			vertical-align: middle
-		&-info
-			display: inline-block
-			vertical-align: middle
-			small
-				display: block
-				white-space: nowrap
+		@include media-breakpoint-down(sm)
+			display: none

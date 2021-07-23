@@ -28,8 +28,8 @@
 	<div class="top-line">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
-					<div class="top-line__title d-flex align-items-center">
+				<div class="col-12 col-lg-10 text-center text-lg-start">
+					<div class="top-line__title d-flex flex-column flex-lg-row align-items-center">
 						<div class="top-line__stars d-flex">
 							<img src="img/icons/star.svg" alt="Star" class="star-icon">
 							<img src="img/icons/star.svg" alt="Star" class="star-icon">
@@ -39,14 +39,14 @@
 						</div>
 						<!-- /.top-line__stars -->
 						<div class="top-line__text">
-							Рекомендованный дилер Hyundai! Первое место в Самарской области по удовлетворенности клиентов*
+							Рекомендованный дилер <b>Hyundai!</b> Первое место в Самарской области по удовлетворенности клиентов*
 						</div>
 						<!-- /.top-line__title -->
 					</div>
 					<!-- /.top-line__title d-flex -->
 				</div>
 				<!-- /.col-lg-8 -->
-				<div class="col-md-4 text-end">
+				<div class="col-12 col-lg-2 text-center text-lg-end">
 					<div class="top-line__adress">Демократическая, 55</div>
 					<!-- /.top-line__adress -->
 				</div>
@@ -58,15 +58,28 @@
 	</div>
 	<!-- /.top-line -->
 	
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container">
 			<div class="header-wrap">
 				<span class="header-logo">
 					<img src="img/hyundai-logo.svg" alt="Хёндэ">
 				</span>
 				<!-- /.header-logo -->
+				<nav class="header-menu">
+					<ul class="p-0 m-0 d-flex">
+						<li><a href="#">Все услуги</a></li>
+						<li><a href="#">Онлайн расчет</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<!-- /.header-menu -->
+				<div class="header-phone d-flex align-items-center">
+					<img src="img/icons/phone_icon.png" alt="Phone Icon" class="me-2">
+					<a href="tel:+79991234567">8 (999) 123-45-67</a>
+				</div>
+				<!-- /.header-phone -->
 				<div class="header-right">
-					<a href="#callbackForm" class="btn modal-link">Обратный&nbsp;звонок</a>
+					<a href="#callbackForm" class="btn modal-link">Заказать&nbsp;звонок</a>
 				</div>
 				<!-- /.header-right -->
 			</div>
