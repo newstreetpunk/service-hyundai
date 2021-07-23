@@ -46,12 +46,15 @@ b, strong
 	color: $white
 	text-decoration: none
 	font-size: 14px
-	padding: 12px 15px
+	padding: 12px 30px
 	text-align: center
 	text-transform: uppercase
-	font-weight: 500
+	font-weight: 400
 	box-shadow: 0 0 30px rgba(#000, .3)
 	border: 1px solid transparent
+	border-radius: 0
+	outline: 0
+	transition: all .2s ease
 	cursor: pointer
 	&:hover
 		color: $white
@@ -64,13 +67,7 @@ b, strong
 	&-red
 		background-color: $red
 
-input[tabindex="-1"]
-	opacity: 0
-	position: absolute
-	z-index: -100
-	max-width: 200px
-	height: 0
-
+@import sections/top-line
 @import sections/header
 @import sections/slider
 
