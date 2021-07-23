@@ -1,4 +1,4 @@
-$height_header: 0px //если шапка имеет абсолютное или фиксированное положение, устанавливаем значение, равное высоте шапки
+$height_header: 80px //если шапка имеет абсолютное или фиксированное положение, устанавливаем значение, равное высоте шапки
 $height_header_mobile: 0px //если шапка имеет абсолютное или фиксированное положение, устанавливаем значение, равное высоте шапки
 $height_banner: calc( 94vh - #{$height_header} )
 $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
@@ -18,7 +18,7 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 .slider
 	position: relative
 	margin-top: 80px
-	@include media-breakpoint-down(sm)
+	@include media-breakpoint-down(md)
 		margin-top: 60px
 	&-form
 		max-width: 400px
@@ -29,16 +29,16 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 		right: 8vw
 		padding: 35px
 		color: $black
-		+media-breakpoint-down(md)
+		+media-breakpoint-down(lg)
 			max-width: 340px
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(md)
 			position: relative
 			top: auto
 			right: auto
 			margin: 50px auto
 			max-width: 400px
 			box-shadow: 0 20px 100px rgba($black, .3)
-			+media-breakpoint-down(xs)
+			+media-breakpoint-down(sm)
 				width: 90%
 				padding: 20px 15px
 		&-title
@@ -58,7 +58,7 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 	opacity: 0
 	visibility: hidden
 	transition: all 1.2s ease
-	+media-breakpoint-down(sm)
+	+media-breakpoint-down(md)
 		min-height: $height_banner
 
 	&.slick-initialized
@@ -73,7 +73,7 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 		width: 100%
 		border: none
 		overflow: hidden
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(md)
 			min-height: $height_banner
 
 		@extend %bv_hidden
@@ -183,16 +183,16 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 		transition: all .3s ease
 		transform: translateY(100px)
 		@extend %bv_hidden
-		+media-breakpoint-down(lg)
+		+media-breakpoint-down(xl)
 			width: 40vw
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(md)
 			width: 90vw
 		.title
 			font-size: 40px
 			font-weight: bold
 			letter-spacing: .02em
 			line-height: 1.2
-			+media-breakpoint-down(lg)
+			+media-breakpoint-down(xl)
 				font-size: 32px
 		.subtitle
 			font-size: 26px
