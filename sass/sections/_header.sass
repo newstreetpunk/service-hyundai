@@ -1,0 +1,79 @@
+// HEADER
+.header
+	background-color: $white
+	// box-shadow: 0 5px 50px rgba(#000, .3)
+	// position: fixed
+	// top: 0
+	// left: 0
+	width: 100%
+	z-index: 10
+	&-logo
+		img
+			width: 220px
+	&-wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 18px 0
+	&-right
+		display: inline-block
+		vertical-align: middle
+		a
+			display: block
+	&-phones
+		display: flex
+	.phone
+		display: inline-block
+		vertical-align: middle
+		margin-right: 24px
+		&:last-child()
+			margin-right: 0
+		a:hover
+			color: $text	
+		img
+			width: 35px
+			height: 100%
+			margin-right: 5px
+			display: inline-block
+			vertical-align: middle
+		&-info
+			display: inline-block
+			vertical-align: middle
+			small
+				display: block
+				white-space: nowrap
+
+.award
+	position: absolute
+	z-index: 100
+	width: 35vw
+	max-width: 200px
+	top: 150px
+	right: 0
+	@media screen and (min-width: 420px)
+		top: 120px
+	@media screen and (min-width: 576px)
+		width: 25vw
+		right: 20px
+	@media screen and (min-width: 730px)
+		top: 100px
+		width: 20vw
+	@media screen and (min-width: 768px)
+		width: 25vw
+		top: 115px
+	@media screen and (min-width: 940px)
+		width: 20vw
+		top: 75px
+	@media screen and (min-width: 992px)
+		top: 70px
+		width: 15vw
+		right: 5%
+		max-width: 140px
+	@media screen and (min-width: 1200px)
+		// left: 50%
+		// top: 300px
+		max-width: 170px
+	@media screen and (min-width: 1600px)
+		left: 50%
+		top: 250px
+		max-width: 300px

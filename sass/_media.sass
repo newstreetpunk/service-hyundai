@@ -1,0 +1,267 @@
+/*==========  Desktop First  ==========*/
+
+// ≤1200px
++media-breakpoint-down(lg)
+	.car
+		padding-bottom: 150px
+		.btn-wrap
+			flex-direction: column
+			.btn
+				display: block
+				width: 100%
+				text-align: center
+				&-white
+					margin-bottom: 10px
+		.price
+			// bottom: 120px
+		.benefit
+			bottom: 105px
+	.car2
+		.descr-item
+			&:not(.quantity)
+				flex-basis: 50%
+		.title_bg
+			font-size: 8vw
+		.car-link
+			.photo
+				height: 16vmax
+
+// ≤992px
++media-breakpoint-down(md)
+	.header
+		position: relative
+	.header-wrap
+		flex-direction: column
+		padding: 15px 0
+	.header-logo img, .header-phones
+		margin-bottom: 15px
+	.container
+		max-width: 97%
+	h1
+		font-size: 3.6vmax
+	.subtitle
+		font-size: 2.1vmax
+	.header-logo img
+		// width: 80px
+	.maps .dealer-info
+		padding-left: 50px
+	.car2
+		.title_bg
+			top: -10px
+		.descr-item
+			min-height: 46px
+			padding-left: 60px
+			&:not(.quantity)
+				flex-basis: 50%
+				font-size: 14px
+				padding-top: 8px
+				&:before
+					border-width: 8px 15px 8px 8px
+					width: 30px
+					height: 30px
+				&:after
+					width: 30px
+					height: 30px
+					top: 15px
+					left: 15px
+			&.cash
+				flex-basis: 100%
+				font-size: 24px
+		.car-link
+			h2
+				width: 100%
+			.photo
+				margin-bottom: 0
+
+
+// ≤768px
++media-breakpoint-down(sm)
+	h1
+		font-size: 42px
+	.subtitle
+		font-size: 24px
+	.maps .dealer, .maps .dealer:nth-child(even)
+		flex-direction: column
+	.maps .dealer-info, .maps .dealer-map, .maps .dealer-map2
+		width: 100%
+	.cars-list
+		justify-content: center
+	.car
+		width: 46%
+		margin-left: 2%
+		margin-right: 2%
+	.car2
+		width: 100%
+		margin: 0 0 55px
+		&:last-child
+			margin-bottom: 0
+		.car-link
+			h2
+				width: auto
+			.photo
+				width: 100%
+				height: 43vw
+				margin-bottom: 0
+		.title_bg
+			font-size: 18vw
+			top: -30px
+			width: 100%
+		.descr-item.quantity
+			flex-basis: 100%
+			max-width: 100%
+			width: 100%
+			padding-left: 80px
+			padding-top: 30px
+			padding-bottom: 24px
+			order: 2
+			margin-bottom: 12px
+			.descr-text
+				display: inline-block
+				font-size: 18px
+				color: $text
+		.descr-item:not(.quantity)
+			flex-basis: 32%
+		.descr-item.cash
+			flex-basis: 100%
+	.player
+		display: none
+	.modal
+		position: relative
+		top: 30px
+		transform: translate(-50%, 0%)
+		padding: 25px 15px
+	
+// ≤576px
++media-breakpoint-down(xs)
+	.cars-links li
+		flex: none
+	.header-phones
+		flex-direction: column
+		margin-bottom: 5px
+	.header .phone
+		margin-bottom: 15px
+	h1
+		font-size: 30px
+		line-height: 1.4
+	.subtitle
+		font-size: 22px
+	.t-radio__control, form small
+		font-size: 14px
+	.offer-head h2
+		font-size: 40px
+	.offer-head .descr
+		font-size: 20px
+	.maps .dealer-info
+		padding-left: 5%
+	.maps .dealer-info, .maps .dealer-map, .maps .dealer-map2, #map1, #map2
+		min-height: auto
+		height: 400px
+	.maps .dealer-info h2
+		line-height: 1.2
+	.maps .dealer-contacts a
+		font-size: 18px
+	.cars-list
+		justify-content: center
+	.car
+		width: 100%
+		margin-left: 0
+		margin-right: 0
+		margin-bottom: 50px
+	.car .photo
+		height: 50vw
+	.car h2
+		// margin-left: 15px
+	.car h2:before
+		left: -10px
+	.car h2:after
+		right: -10px
+	.benefit
+		left: 0
+	.car2
+		.title_bg
+			font-size: 18vw
+			top: -5px
+		.car-link
+			.photo
+				margin-bottom: 0
+		.descr-item
+			&:not(.quantity)
+				flex-basis: 50%
+			.quantity
+				.descr-text
+					font-size: 14px
+		.descr-item.cash
+			font-size: 20px
+	.offer
+		padding: 25px 0
+	.modal .range__title
+		font-size: 16px
+	.privacy
+		padding: 40px 12px
+		h2
+			font-size: 18px
+		p
+			font-size: 15px
+			text-align: left
+
+@media (max-width: 400px) 
+	.car2 
+		.descr-item:not(.quantity)
+			flex-basis: 100%
+		&-bottom 
+			flex-direction: column
+			.gift-box
+				min-height: 54px
+				flex-basis: 100%
+				width: 100%
+				margin-bottom: 10px
+				background-position: 10px
+
+/*==========  Mobile First  ==========*/
+
+// ≥576px
++media-breakpoint-up(sm)
+
+// ≥768px
++media-breakpoint-up(md)
+	.anchor
+		margin-top: -93px
+// ≥992px
++media-breakpoint-up(lg)
+
+// ≥1200px
++media-breakpoint-up(xl)
+	body
+		font-size: 20px
+
+@media (min-width: 1600px) 
+	.container 
+		max-width: 1560px
+	body 
+		font-size: 22px
+	.car
+		width: 21%
+	.car .btn-wrap .btn
+		padding: 12px 25px
+	.cars-links li
+		flex: none
+	.car .descr
+		font-size: 17px
+	.car2
+		width: 31%
+		margin: 0 1% 2%
+		.car-link .photo
+			height: 180px
+			margin-bottom: 0
+		.descr
+			justify-content: space-between
+		.descr-item:not(.quantity)
+			flex-basis: 50%
+
+
+/*==========  Using the minimum and maximum breakpoint widths  ==========*/
+
+// Large devices (desktops, 992px and up)
++media-breakpoint-only(lg)
+	.header .container
+		max-width: 992px
