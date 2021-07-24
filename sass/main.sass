@@ -16,7 +16,7 @@ body
 	line-height: 1.6
 	font-family: $default-font
 	overflow-x: hidden
-	font-weight: 300
+	font-weight: 400
 	color: $text
 	input, textarea
 		border: #666 1px solid
@@ -72,6 +72,36 @@ input[type="email"]
 		box-shadow: none
 	&-red
 		background-color: $red
+
+section
+	position: relative
+	padding: 80px 0
+	h2
+		font-size: 34px
+		padding-bottom: 14px
+		font-weight: bold
+		text-align: center
+		text-transform: uppercase
+		color: $black
+		position: relative
+		margin-bottom: 0
+		&::after
+			content: ''
+			position: absolute
+			height: 4px
+			width: 120px
+			background-color: $red
+			position: absolute
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
+
+.sect-subtitle
+	font-size: 18px
+	text-transform: uppercase
+	letter-spacing: 1.4px
+	padding: 30px 0 40px
+	text-align: center
 
 @import sections/top-line
 @import sections/header
