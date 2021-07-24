@@ -22,12 +22,12 @@ body
 		border: #666 1px solid
 		outline: none
 		&:focus:required:invalid
-			border-color: red
+			border-color: $red
 		&:required:valid
-			border-color: green
+			border-color: $text
 a
 	color: $accent
-	font-weight: bold
+	font-weight: 500
 	text-decoration: none
 	transition: all .2s ease
 	&:hover
@@ -40,6 +40,12 @@ img
 
 b, strong
 	font-weight: 600
+
+input[type="text"],
+input[type="tel"],
+input[type="email"]
+	border: none
+	border-bottom: 1px solid $text
 
 .btn
 	background-color: $accent

@@ -118,13 +118,6 @@
 				</figure>
 			</a>
 
-			<a href="#slider" class="item vimeo" data-video-start="4">
-				<iframe class="embed-player slide-media three lazyload" data-src="https://player.vimeo.com/video/160658907?api=1&byline=0&portrait=0&title=0&background=1&mute=1&loop=1&autoplay=0&id=160658907" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				<figcaption class="caption">
-					<p class="title">Vimeo</p>
-				</figcaption>
-			</a>
-
 			<a href="#slider" class="item image">
 				<span class="loading">Loading...</span>
 				<figure>
@@ -135,60 +128,28 @@
 				</figure>
 			</a>
 
-			<a href="#slider" class="item youtube">
-				<iframe class="embed-player slide-media five lazyload" data-src="https://www.youtube.com/embed/FadUo2ycxoM?enablejsapi=1&controls=0&mute=1&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist=FadUo2ycxoM&start=1" frameborder="0" allowfullscreen></iframe>
-				<p class="caption">YouTube</p>
-			</a>
-
-			<a href="#slider" class="item image">
-				<span class="loading">Loading...</span>
-				<figure>
-					<div class="slide-image slide-media" style="background-image:url(https://placekitten.com/160/100);">
-						<img data-lazy="https://drive.google.com/uc?export=view&id=0B2f40UV1GuGEYmk3QnA3LVp3TTU3cmtlUWJaX2U4NU1ZdWQ0" class="image-entity" />
-					</div>
-					<figcaption class="caption">Static Image</figcaption>
-				</figure>
-			</a>
-
-			<a href="#slider" class="item youtube">
-				<iframe class="embed-player slide-media lazyload" width="980" height="520" data-src="https://www.youtube.com/embed/oB8dWRdYoQY?enablejsapi=1&controls=0&mute=1&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist=oB8dWRdYoQY&start=1" frameborder="0" allowfullscreen></iframe>
-				<p class="caption">YouTube Vertical</p>
-			</a>
-
-			<a href="#slider" class="item image">
-				<span class="loading">Loading...</span>
-				<figure>
-					<div class="slide-image slide-media" style="background-image:url(https://placekitten.com/160/100);">
-						<img data-lazy="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLSlBkWDBsWXJNazQ" class="image-entity" />
-					</div>
-					<figcaption class="caption">Static Image</figcaption>
-				</figure>
-			</a>
-
-			<a href="#slider" class="item video">
-				<video class="slide-video slide-media lazyload" loop muted preload="metadata" data-poster="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLSXZCakVGZWhOV00">
-					<source data-src="https://player.vimeo.com/external/138504815.sd.mp4?s=8a71ff38f08ec81efe50d35915afd426765a7526&profile_id=112" type="video/mp4" />
-				</video>
-				<p class="caption">HTML 5 Video</p>
-			</a>
-
 		</div>
 
 		<div class="slider-form">
-			<div class="slider-form-title">Зарезервируйте авто <span>сейчас</span></div>
+			<div class="slider-form-title">Онлайн запись на <span>сервис</span></div>
 			<p class="slider-form-subtitle">Оставьте свой номер телефона, и&nbsp;мы перезвоним Вам</p>
-			<form method="POST">
+			<form>
 				<!-- Hidden Required Fields -->
-				<input type="hidden" name="project_name" value="Service Avtobum">
-				<input type="hidden" name="admin_email" value="<?php echo $email; ?>">
+				<input type="hidden" name="project_name" value="">
+				<input type="hidden" name="admin_email" value="">
 				<input type="hidden" name="form_subject" value="Форма из баннера">
 				<!-- END Hidden Required Fields -->
 
 				<input type="text" name="Имя" placeholder="Ваше имя">
-				<input type="tel" name="Телефон" placeholder="8 (999) 999-99-99*" required>
-				<input type="email" name="Email" placeholder="mail@example.com">
-				<button type="submit" class="btn">Записаться</button>
-				<small>Нажимая на кнопку "Записаться", я даю согласие на <a href="#popup">обработку персональных данных</a></small>
+				<input type="tel" name="Телефон" placeholder="+7 999 999-99-99 *" required>
+
+				<div class="fakecheck">
+					<input type="checkbox" name="agree" id="banner_agree">
+					<label for="banner_agree"><small>Я согласен на <a href="#popup">обработку персональных данных</a></small></label>
+				</div>
+				<!-- /.fakecheck -->
+				
+				<button class="btn">Отправить</button>
 			</form>
 		</div>
 
