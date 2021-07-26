@@ -97,6 +97,8 @@ section
 			top: 100%
 			left: 50%
 			transform: translateX(-50%)
+		@include media-breakpoint-down(sm)
+			font-size: 24px
 
 .sect-subtitle
 	font-size: 18px
@@ -143,7 +145,44 @@ section
 	.btn
 		font-size: 14px
 		text-transform: none
+.calculation
+	p
+		@include media-breakpoint-down(lg)
+			width: 100% !important
+		@include media-breakpoint-down(sm)
+			font-size: 14px
+	ul
+		li
+			@include media-breakpoint-down(lg)
+				width: 100% !important
 
+.calculation-block
+	max-width: 572px
+	width: 100%
+	position: relative
+	padding: 30px 0
+	@include media-breakpoint-down(sm)
+		padding: 10px 0
+
+.present
+	position: relative
+	z-index: 90
+	.container
+		@include media-breakpoint-down(lg)
+			justify-content: center !important
+		h2
+			@include media-breakpoint-down(lg)
+				margin-bottom: 20px
+				text-align: center
+		// .btn
+		// 	@include media-breakpoint-down(sm)
+		// 		font-size: 14px
+		// 		padding: 10px
+
+.bg-accent
+	background-color: $red
+	color: $white
+	text-transform: uppercase
 
 .dealer-phone-map
 	font-size: 22px
