@@ -60,6 +60,7 @@ projects.service_hyundai = {
 			basename + '/libs/Magnific-Popup-master/jquery.magnific-popup.js',
 			basename + '/libs/lazyload/lazyload.js',
 			basename + '/js/slider.js',
+			basename + '/js/map.js',
 			basename + '/js/common.js', // Custom scripts. Always at the end
 		],
 		dest:       basename + '/js',

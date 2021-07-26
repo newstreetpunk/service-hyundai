@@ -3,8 +3,8 @@ $(function() {
     let maps = [
             {
                 parent: '.dealer-map',
-                id: "map1",
-                position: [45.017397, 38.937629],
+                id: "map",
+                position: [53.275197,50.227754],
                 zoom: 17,
                 balloonContentHeader: 'Официальный дилерский центр Hyundai «Huindai Автохолдинг»',
                 balloonContentBody: '<a href="tel:+78612974444" class="dealer-phone">☎️ +7 (861) 297-44-44</a><br><a href="mailto:reception@hyundai-turgenevskiy.ru" class="dealer-email">📩 reception@hyundai-turgenevskiy.ru</a><br><br> \
@@ -21,7 +21,8 @@ $(function() {
     //Функция создания карты сайта и затем вставки ее в блок с идентификатором "map-yandex"
     function init() {
         var myMapTemp = new ymaps.Map(this.id, {
-            center: this.position, // координаты центра на карте
+            // center: [53.27530961361495,50.23211527185821], // координаты центра на карте
+            center: this.position,
             zoom: this.zoom, // коэффициент приближения карты
         });
         myMapTemp.behaviors.disable('scrollZoom');
