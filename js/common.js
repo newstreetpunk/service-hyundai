@@ -19,10 +19,29 @@ jQuery(function($) {
 		};
 	});
 
-	$('.modal-link').magnificPopup({
-		type: 'inline',
-		fixedContentPos: true,
-		preloader: false,
+	$('a.scroll').on("click", function(e){
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top - 80
+		}, 100);
+		return false;
+	});
+
+	$('.modal-link').on('click', function(){
+		let id    = $(this).attr('href'),
+			title = $(this).data('title');
+
+		$(id).find('h2').text(title);
+
+		$.magnificPopup.open({
+			items: {
+				src: id,
+				type: 'inline',
+				fixedContentPos: true,
+				preloader: false,
+			}			
+		});
+		return false;
 	});
 
 	$('a[href="#popup"]').on('click', function(){

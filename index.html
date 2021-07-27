@@ -67,9 +67,9 @@
 				<!-- /.header-logo -->
 				<nav class="header-menu">
 					<ul class="p-0 m-0 d-flex">
-						<li><a href="#services">Все услуги</a></li>
-						<li><a href="#calculation">Онлайн расчет</a></li>
-						<li><a href="#contacts">Контакты</a></li>
+						<li><a href="#services" class="scroll">Все услуги</a></li>
+						<li><a href="#calculation" class="scroll">Онлайн расчет</a></li>
+						<li><a href="#contacts" class="scroll">Контакты</a></li>
 					</ul>
 				</nav>
 				<!-- /.header-menu -->
@@ -79,7 +79,7 @@
 				</div>
 				<!-- /.header-phone -->
 				<div class="header-right">
-					<a href="#callbackForm" class="btn modal-link">Заказать&nbsp;звонок</a>
+					<a href="#callback_form" class="btn modal-link" data-title="Обратная связь">Заказать&nbsp;звонок</a>
 				</div>
 				<!-- /.header-right -->
 			</div>
@@ -265,7 +265,7 @@
 				<!-- /.services-block -->
 
 				<div class="text-center">
-					<a href="#calculation" class="btn btn-red mt-4">Онлайн расчет</a>
+					<a href="#calculation" class="btn btn-red scroll mt-4">Онлайн расчет</a>
 				</div>
 				<!-- /.text-center -->
 
@@ -280,20 +280,20 @@
 				<p class="sect-subtitle mb-3 pb-0">Накопительная система скидок при прохождении ТО</p>
 				<div class="calculation-block mx-auto">
 					<img src="img/car.png" alt="HYUNDAY" class="mx-auto">
-					<a href="#popup" class="modal-link calculation-link position-absolute" id="hood" title="Капот">+</a>			
-					<a href="#popup" class="modal-link calculation-link position-absolute" id="front_bumper" title="Бампер передний">+</a>			
-					<a href="#popup" class="modal-link calculation-link position-absolute" id="roof" title="Крыша">+</a>			
-					<a href="#popup" class="modal-link calculation-link position-absolute" id="front_door" title="Дверь передняя">+</a>			
-					<a href="#popup" class="modal-link calculation-link position-absolute" id="back_door" title="Дверь задняя">+</a>			
-					<a href="#popup" class="modal-link calculation-link position-absolute" id="back_bumper" title="Бампер задний">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="hood" title="Капот">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="front_bumper" title="Бампер передний">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="roof" title="Крыша">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="front_door" title="Дверь передняя">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="back_door" title="Дверь задняя">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="back_bumper" title="Бампер задний">+</a>			
 				</div>
 				<!-- /.calculation-block -->
 				<ul class="mt-4">
 					<li class="w-50 mb-3">Для тех, кто впервые приехал в наш сервисный центр на ТО автомобиля, мы предоставляем <b>БЕСПЛАТНУЮ</b> комплексную мойку.</li>
-					<li class="w-50 mb-3">Выгода на постгарантийный ремонт <b>до 30%</b></li>
-					<li class="w-50 mb-3">Обслуживание кондиционера за <b>1 руб.</b></li>
-					<li class="w-50 mb-3">Межсервисное обслуживание <b>от 3 000 руб</b>.</li>
-					<li class="w-50">Проверка развал-схождения бесплатно, если автомобилю <b>больше 3х лет</b>**</li>
+					<li class="w-50 mb-3">Выгода на постгарантийный ремонт <b>до&nbsp;30%</b></li>
+					<li class="w-50 mb-3">Обслуживание кондиционера за&nbsp;<b>1&nbsp;руб.</b></li>
+					<li class="w-50 mb-3">Межсервисное обслуживание <b>от&nbsp;3&nbsp;000&nbsp;руб</b>.</li>
+					<li class="w-50">Проверка развал-схождения бесплатно, если автомобилю <b>больше&nbsp;3х&nbsp;лет</b>&nbsp;**</li>
 				</ul>
 			</div>
 			<!-- /.container -->
@@ -301,10 +301,9 @@
 		<!-- /#calculation.calculation -->
 
 		<div class="present bg-accent">
-			<svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-0 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
 			<div class="container d-flex flex-wrap justify-content-between align-items-center">
-				<h2>Дарим 1000 руб. на обслуживание!</h2>
-				<a href="#popup" class="btn btn-red modal-link">Записаться на сервис онлайн</a>
+				<h2>Дарим&nbsp;1000&nbsp;руб. на обслуживание!</h2>
+				<a href="#callback_form" class="btn btn-red modal-link" data-title="Запись на сервис">Записаться на сервис онлайн</a>
 			<!-- /.btn -->
 			</div>
 			<!-- /.container -->			
@@ -330,6 +329,71 @@
 **-Не является публичной офертой.</small></p>
 		</div>
 	</footer>
+
+	<!-- MODALS -->
+
+	<div class="modal mfp-hide white-popup-block" id="callback_form">
+		<h2>Обратная связь</h2>
+		<span class="form-subtitle">Оставьте свои данные и наш менеджер свяжется с Вами в ближайшее время</span>
+		<form>
+			<div class="form-group">
+				<input type="text" name="first-name" placeholder="Ваше имя">
+			</div>
+			<!-- /.form-group -->
+			<div class="form-group">
+				<input type="tel" name="Телефон" placeholder="+7 999 999-99-99 *" required>
+			</div>
+			<!-- /.form-group -->
+
+			<div class="fakecheck">
+				<input type="checkbox" name="agree" id="banner_agree">
+				<label for="banner_agree"><small>Я согласен на <a href="#popup">обработку персональных данных</a></small></label>
+			</div>
+			<!-- /.fakecheck -->
+
+			<input type="submit" class="btn" value="Отправить">
+
+		</form>
+	</div>
+
+	<div class="modal mfp-hide white-popup-block" id="service_popup">
+		<h2>Обратная связь</h2>
+		<span class="form-subtitle">Оставьте свои данные и наш менеджер свяжется с Вами в ближайшее время</span>
+		<form>
+			<div class="form-group">
+				<input type="text" name="first-name" placeholder="Ваше имя">
+			</div>
+			<!-- /.form-group -->
+			<div class="form-group">
+				<input type="tel" name="Телефон" placeholder="+7 999 999-99-99 *" required>
+			</div>
+			<!-- /.form-group -->
+
+			<div class="file-upload" id="file-upload"></div>
+
+			<div class="fakecheck">
+				<input type="checkbox" name="agree" id="banner_agree">
+				<label for="banner_agree"><small>Я согласен на <a href="#popup">обработку персональных данных</a></small></label>
+			</div>
+			<!-- /.fakecheck -->
+
+			<input type="submit" class="btn" value="Записаться">
+
+		</form>
+	</div>
+
+	<!-- #MODALS -->
+
+	<!-- Политика -->
+
+	<div class="privacy-wrap">
+		<div class="overlay"></div>
+		<div class="privacy" id="popup">
+			<button class="privacy-close">×</button>
+			<h2>Условия и&nbsp;способы обработки и&nbsp;хранения персональных данных</h2>
+			<p>Настоящее согласие дается на&nbsp;выполнение следующих действий (операций), совершаемых с&nbsp;использованием средств автоматизации или без использования таких средств с&nbsp;персональными данными: сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача, в&nbsp;том числе трансграничная (распространение в&nbsp;случаях и&nbsp;в&nbsp;объеме, предусмотренных законодательством&nbsp;РФ, в&nbsp;том числе предоставление в&nbsp;государственные органы и&nbsp;иные организации), обезличивание, блокирование, удаление, уничтожение персональных данных в&nbsp;целях:<br>а) продвижения товаров и&nbsp;услуг, поставляемых Сервисный центр &laquo;Альфа&raquo; и&nbsp;официальными дилерами Сервисный центр &laquo;Альфа&raquo;;<br>б) получения и&nbsp;исследования статистических данных об&nbsp;объемах продаж и&nbsp;качестве услуг, оказываемых Сервисный центр &laquo;Альфа&raquo; и&nbsp;официальными дилерами Сервисный центр &laquo;Альфа&raquo; при продаже автомобилей;<br>в) изучения конъюнктуры рынка автомобилей, автомобильных запасных частей и&nbsp;аксессуаров;<br>г) совершенствования уровня предоставляемых Сервисный центр &laquo;Альфа&raquo; и&nbsp;официальными дилерами Сервисный центр &laquo;Альфа&raquo; услуг;<br>д) осуществления гарантийного ремонта и&nbsp;технического обслуживания автомобилей;<br>е) осуществления других видов деятельности в&nbsp;рамках законодательства&nbsp;РФ с&nbsp;обязательным выполнением требований законодательства&nbsp;РФ в&nbsp;области персональных данных.<br><br>Настоящим Вы&nbsp;выражаете свое согласие на&nbsp;получение от&nbsp;Сервисный центр &laquo;Альфа&raquo; и&nbsp;официальных дилеров Сервисный центр &laquo;Альфа&raquo; рекламных материалов, связанных с&nbsp;продвижением товаров и&nbsp;услуг, поставляемых Сервисный центр &laquo;Альфа&raquo; и&nbsp;официальными дилерами Сервисный центр &laquo;Альфа&raquo;, путем осуществления прямых контактов с&nbsp;помощью различных средств связи, включая, но, не&nbsp;ограничиваясь: почтовая рассылка, sms&nbsp;&mdash; рассылка, электронная почта, телефон, Интернет.<br><br>Персональные данные, полученные Сервисный центр &laquo;Альфа&raquo; и&nbsp;официальными дилерами Сервисный центр &laquo;Альфа&raquo;, хранятся в&nbsp;соответствии с&nbsp;требованиями законодательства&nbsp;РФ на&nbsp;условиях конфиденциальности. Вы&nbsp;соглашаетесь с&nbsp;тем, что, если это необходимо для реализации целей, указанных выше, Ваши персональные данные могут быть переданы третьим лицам, которым Сервисный центр &laquo;Альфа&raquo; и&nbsp;официальные дилеры Сервисный центр &laquo;Альфа&raquo; могут поручить обработку Ваших персональных данных на&nbsp;основании договора, заключенного с&nbsp;такими лицами, при условии соблюдения требований законодательства&nbsp;РФ об&nbsp;обеспечении такими третьими лицами конфиденциальности и&nbsp;безопасности персональных данных при их&nbsp;обработке.<br><br>Оператор (Операторы) персональных данных ведет (ведут) деятельность на&nbsp;территории Российской Федерации в&nbsp;соответствии с&nbsp;законодательством Российской Федерации. Предлагаемые товары/работы/услуги доступны к&nbsp;получению на&nbsp;территории Российской Федерации. Мониторинг потребительского поведения субъектов, находящихся за&nbsp;пределами Российской Федерации, не&nbsp;ведется.<br><br>Настоящее согласие на&nbsp;обработку персональных данных действует с&nbsp;момента проставления отметки и&nbsp;до&nbsp;получения письменного отзыва данного согласия. Настоящим Вы&nbsp;подтверждаете, что ознакомлены с&nbsp;порядком отзыва согласия на&nbsp;обработку персональных данных, представленным ниже.<br><br><br>&laquo;Порядок отзыва&raquo; Согласие может быть в&nbsp;любое время отозвано Вами путем уведомления официального дилера Сервисный центр &laquo;Альфа&raquo; на&nbsp;территории России, либо путем направления в&nbsp;письменной форме уведомления в&nbsp;адрес Сервисный центр &laquo;Альфа&raquo; (заказным почтовым отправлением с&nbsp;описью вложения).<br>*Сервисный центр &laquo;Альфа&raquo;, г. Самара, ул. Новоурицкая, 22А (<a href="https://www.alpha-center.ru/" style="background-color: rgba(255, 255, 255, 0.97); color: rgb(17, 85, 204); text-decoration-line: underline; font-size: 16px;">www.alpha-center.ru</a>)<br>**Сервисный центр &laquo;Альфа&raquo; оставляет за&nbsp;собой право поручать обработку предоставленных персональных данных другим лицам, в&nbsp;том числе находящимся за&nbsp;пределами Российской Федерации&quot;</p>
+		</div>
+	</div>
 
 
 	<script src="js/scripts.min.js"></script>

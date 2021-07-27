@@ -41,6 +41,9 @@ img
 b, strong
 	font-weight: 600
 
+.fakecheck
+	font-size: 13px
+
 input[type="text"],
 input[type="tel"],
 input[type="email"]
@@ -72,6 +75,9 @@ input[type="email"]
 		box-shadow: none
 	&-red
 		background-color: $red
+		&:hover
+			color: $white
+			background-color: darken($red, 3)
 .gray-bg
 	background-color: rgba($grayEF, .5)
 section
