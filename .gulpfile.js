@@ -59,6 +59,7 @@ projects.service_hyundai = {
 			'node_modules/slick-carousel/slick/slick.js',
 			basename + '/libs/Magnific-Popup-master/jquery.magnific-popup.js',
 			basename + '/libs/dropzone/dropzone.js',
+			basename + '/libs/lazyload/lazyload.js',
 			basename + '/js/slider.js',
 			basename + '/js/map.js',
 			basename + '/js/form.js',
