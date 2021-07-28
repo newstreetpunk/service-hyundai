@@ -135,19 +135,18 @@
 			<p class="slider-form-subtitle">Оставьте свой номер телефона, и&nbsp;мы перезвоним Вам</p>
 			<form>
 				<!-- Hidden Required Fields -->
-				<input type="hidden" name="project_name" value="">
-				<input type="hidden" name="admin_email" value="">
-				<input type="hidden" name="form_subject" value="Форма из баннера">
+				<input type="hidden" name="Форма" value="Форма из баннера">
 				<!-- END Hidden Required Fields -->
 
 				<input type="text" name="Имя" placeholder="Ваше имя">
-				<input type="tel" name="Телефон" placeholder="+7 999 999-99-99 *" required>
+				<input type="tel" name="phone" placeholder="+7 999 999-99-99 *">
+				<div class="error-mes mb-2" id="phone"></div>
 
 				<div class="fakecheck">
 					<input type="checkbox" name="agree" id="banner_agree">
 					<label for="banner_agree"><small>Я согласен на <a href="#popup">обработку персональных данных</a></small></label>
 				</div>
-				<!-- /.fakecheck -->
+				<div class="error-mes mb-2" id="agree"></div>
 				
 				<button class="btn">Отправить</button>
 			</form>
@@ -228,7 +227,7 @@
 								<div class="d-flex align-items-center justify-content-between px-4 py-4 mb-4 service-item">
 									<h3 class="fw-normal">Выпрямление вмятин без покраски</h3>
 									<div class="service-item__price d-flex align-items-end"><small>от</small>1000₽</div>
-									<a href="#service_popup" class="btn modal-link p-2">Записаться</a>
+									<a href="#service_popup" class="btn modal-link p-2" data-title="Кузовные работы">Записаться</a>
 								</div>
 							</div>
 							<!-- /.col-12 col-md-6 -->
@@ -236,7 +235,7 @@
 								<div class="d-flex align-items-center justify-content-between px-4 py-4 mb-4 service-item">
 									<h3 class="fw-normal">Полная покраска<br> элемента</h3>
 									<div class="service-item__price d-flex align-items-end"><small>от</small>8000₽</div>
-									<a href="#service_popup" class="btn modal-link p-2">Записаться</a>
+									<a href="#service_popup" class="btn modal-link p-2" data-title="Кузовные работы">Записаться</a>
 								</div>
 							</div>
 							<!-- /.col-12 col-md-6 -->
@@ -244,7 +243,7 @@
 								<div class="d-flex align-items-center justify-content-between px-4 py-4 mb-4 service-item">
 									<h3 class="fw-normal">Полировка</h3>
 									<div class="service-item__price d-flex align-items-end"><small>от</small>10 000₽</div>
-									<a href="#service_popup" class="btn modal-link p-2">Записаться</a>
+									<a href="#service_popup" class="btn modal-link p-2" data-title="Кузовные работы">Записаться</a>
 								</div>
 							</div>
 							<!-- /.col-12 col-md-6 -->
@@ -252,7 +251,7 @@
 								<div class="d-flex align-items-center justify-content-between px-4 py-4 mb-4 service-item">
 									<h3 class="fw-normal">Керамика</h3>
 									<div class="service-item__price d-flex align-items-end"><small>от</small>10 000₽</div>
-									<a href="#service_popup" class="btn modal-link p-2">Записаться</a>
+									<a href="#service_popup" class="btn modal-link p-2" data-title="Кузовные работы">Записаться</a>
 								</div>
 							</div>
 							<!-- /.col-12 col-md-6 -->
@@ -280,15 +279,15 @@
 				<p class="sect-subtitle mb-3 pb-0">Накопительная система скидок при прохождении ТО</p>
 				<div class="calculation-block mx-auto">
 					<img src="img/car.png" alt="HYUNDAY" class="mx-auto">
-					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="hood" title="Капот">+</a>			
-					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="front_bumper" title="Бампер передний">+</a>			
-					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="roof" title="Крыша">+</a>			
-					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="front_door" title="Дверь передняя">+</a>			
-					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="back_door" title="Дверь задняя">+</a>			
-					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="back_bumper" title="Бампер задний">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="hood" title="Капот" data-title="Кузовные работы">+</a>		
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="front_bumper" title="Бампер передний" data-title="Кузовные работы">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="roof" title="Крыша" data-title="Кузовные работы">+</a>		
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="front_door" title="Дверь передняя" data-title="Кузовные работы">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="back_door" title="Дверь задняя" data-title="Кузовные работы">+</a>			
+					<a href="#service_popup" class="modal-link calculation-link position-absolute" id="back_bumper" title="Бампер задний" data-title="Кузовные работы">+</a>			
 				</div>
 				<!-- /.calculation-block -->
-				<ul class="mt-4">
+				<ul class="mt-4 ps-3">
 					<li class="w-50 mb-3">Для тех, кто впервые приехал в наш сервисный центр на ТО автомобиля, мы предоставляем <b>БЕСПЛАТНУЮ</b> комплексную мойку.</li>
 					<li class="w-50 mb-3">Выгода на постгарантийный ремонт <b>до&nbsp;30%</b></li>
 					<li class="w-50 mb-3">Обслуживание кондиционера за&nbsp;<b>1&nbsp;руб.</b></li>
@@ -303,7 +302,7 @@
 		<div class="present bg-accent">
 			<div class="container d-flex flex-wrap justify-content-between align-items-center">
 				<h2>Дарим&nbsp;1000&nbsp;руб. на обслуживание!</h2>
-				<a href="#callback_form" class="btn btn-red modal-link" data-title="Запись на сервис">Записаться на сервис онлайн</a>
+				<a href="#service_popup" class="btn btn-red modal-link" data-title="Запись на сервис" data-form="Дарим 1000 руб. на обслуживание!">Записаться на сервис онлайн</a>
 			<!-- /.btn -->
 			</div>
 			<!-- /.container -->			
@@ -326,7 +325,7 @@
 		<img src="img/hyundai-logo-small.svg" alt="Хендай">
 		<div class="container mt-4">
 			<p class="fw-normal"><small>*-Рейтинг основан на рекомендации клиентов отделов продаж и сервиса, полученных в ходе телефонных исследований SSI, CSI, а также по результатам проверок Тайный Покупатель<br>
-**-Не является публичной офертой.</small></p>
+			**-Не является публичной офертой.</small></p>
 		</div>
 	</footer>
 
@@ -336,20 +335,24 @@
 		<h2>Обратная связь</h2>
 		<span class="form-subtitle">Оставьте свои данные и наш менеджер свяжется с Вами в ближайшее время</span>
 		<form>
+			<!-- Hidden Required Fields -->
+				<input type="hidden" name="Форма" value="Заказать звонок">
+				<!-- END Hidden Required Fields -->
 			<div class="form-group">
-				<input type="text" name="first-name" placeholder="Ваше имя">
+				<input type="text" name="Имя" placeholder="Ваше имя">
 			</div>
 			<!-- /.form-group -->
 			<div class="form-group">
-				<input type="tel" name="Телефон" placeholder="+7 999 999-99-99 *" required>
+				<input type="tel" name="phone" placeholder="+7 999 999-99-99 *">
+				<div class="error-mes mb-2" id="phone"></div>
 			</div>
 			<!-- /.form-group -->
 
 			<div class="fakecheck">
-				<input type="checkbox" name="agree" id="banner_agree">
-				<label for="banner_agree"><small>Я согласен на <a href="#popup">обработку персональных данных</a></small></label>
+				<input type="checkbox" name="agree" id="callback_agree">
+				<label for="callback_agree"><small>Я согласен на <a href="#popup">обработку персональных данных</a></small></label>
 			</div>
-			<!-- /.fakecheck -->
+			<div class="error-mes mb-2" id="agree"></div>
 
 			<input type="submit" class="btn" value="Отправить">
 
@@ -360,12 +363,17 @@
 		<h2>Обратная связь</h2>
 		<span class="form-subtitle">Оставьте свои данные и наш менеджер свяжется с Вами в ближайшее время</span>
 		<form>
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="Форма" id="type_form"value="Запись на сервис">
+			<input type="hidden" name="Услуга" id="form_srvice">
+			<!-- END Hidden Required Fields -->
 			<div class="form-group">
-				<input type="text" name="first-name" placeholder="Ваше имя">
+				<input type="text" name="Имя" placeholder="Ваше имя">
 			</div>
 			<!-- /.form-group -->
 			<div class="form-group">
-				<input type="tel" name="Телефон" placeholder="+7 999 999-99-99 *" required>
+				<input type="tel" name="phone" placeholder="+7 999 999-99-99 *">
+				<div class="error-mes mb-2" id="phone"></div>
 			</div>
 			<!-- /.form-group -->
 
@@ -374,10 +382,10 @@
 			<div class="success-message"></div>
 
 			<div class="fakecheck">
-				<input type="checkbox" name="agree" id="banner_agree">
-				<label for="banner_agree"><small>Я согласен на <a href="#popup">обработку персональных данных</a></small></label>
+				<input type="checkbox" name="agree" id="serv_agree">
+				<label for="serv_agree"><small>Я согласен на <a href="#popup">обработку персональных данных</a></small></label>
 			</div>
-			<!-- /.fakecheck -->
+			<div class="error-mes mb-2" id="agree"></div>
 
 			<input type="submit" class="btn" value="Записаться">
 
