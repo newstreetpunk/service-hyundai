@@ -20,63 +20,67 @@ $$("input[name=phone]").forEach(function (element) {
 let dropzoneError = $('.error-message');
 let dropzoneSuccess = $('.success-message');
 
-let dropzone = new Dropzone('#file-upload', {
-	url: 'upload.php',
-	addRemoveLinks: true,
-	parallelUploads: 1,
-	acceptedFiles: '.jpg,.jpeg,.png',
-	maxFiles: 10,
-	maxFilesize: 10,
-	dictDefaultMessage: '<div class="dz-message needsclick">Вы можете приложить фотографии, не более 10</div>',
-	dictFallbackMessage: "Ваш браузер не поддерживает загрузку перетаскиванием",
-	dictFallbackText: "Пожалуйста, используйте резервную форму ниже, чтобы загрузить свои файлы, как в старые добрые времена)",
-	dictFileTooBig: "Слишком большой файл ({{filesize}}Мб). Максимальный размер: {{maxFilesize}}Мб.",
-	dictInvalidFileType: "Вы не можете загрузить файлы этого типа.",
-	dictResponseError: "Сервер вернул ответ {{statusCode}}.",
-	dictCancelUpload: "Отменить загрузку",
-	dictUploadCanceled: "Загрузка завершена.",
-	dictCancelUploadConfirmation: "Вы уверены, что хотите отменить?",
-	dictRemoveFile: "Удалить файл",
-	dictRemoveFileConfirmation: "Хотите удалить файл?",
-	dictMaxFilesExceeded: 'Привышен лимит изображений',
-	dictFileSizeUnits: {
-		tb: "Тб",
-		gb: "Гб",
-		mb: "Мб",
-		kb: "Кб",
-		b: "байт"
-	},
-	init: function(){
-		$(this.element).html(this.options.dictDefaultMessage);
-	},
-	thumbnail: function(file, dataUrl) {
-		if (file.previewElement) {
-			file.previewElement.classList.remove("dz-file-preview");
-			let images = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
-			for (let i = 0; i < images.length; i++) {
-				let thumbnailElement = images[i];
-				thumbnailElement.alt = file.name;
-				thumbnailElement.src = dataUrl;
-				url = dataUrl;
+let uploadFields = document.querySelectorAll('#file-upload');
+
+uploadFields.forEach(function(elem){
+	let dropzone = new Dropzone(elem, {
+		url: 'upload.php',
+		addRemoveLinks: true,
+		parallelUploads: 1,
+		acceptedFiles: '.jpg,.jpeg,.png',
+		maxFiles: 10,
+		maxFilesize: 10,
+		dictDefaultMessage: '<div class="dz-message needsclick">Вы можете приложить фотографии, не более 10</div>',
+		dictFallbackMessage: "Ваш браузер не поддерживает загрузку перетаскиванием",
+		dictFallbackText: "Пожалуйста, используйте резервную форму ниже, чтобы загрузить свои файлы, как в старые добрые времена)",
+		dictFileTooBig: "Слишком большой файл ({{filesize}}Мб). Максимальный размер: {{maxFilesize}}Мб.",
+		dictInvalidFileType: "Вы не можете загрузить файлы этого типа.",
+		dictResponseError: "Сервер вернул ответ {{statusCode}}.",
+		dictCancelUpload: "Отменить загрузку",
+		dictUploadCanceled: "Загрузка завершена.",
+		dictCancelUploadConfirmation: "Вы уверены, что хотите отменить?",
+		dictRemoveFile: "Удалить файл",
+		dictRemoveFileConfirmation: "Хотите удалить файл?",
+		dictMaxFilesExceeded: 'Привышен лимит изображений',
+		dictFileSizeUnits: {
+			tb: "Тб",
+			gb: "Гб",
+			mb: "Мб",
+			kb: "Кб",
+			b: "байт"
+		},
+		init: function(){
+			$(this.element).html(this.options.dictDefaultMessage);
+		},
+		thumbnail: function(file, dataUrl) {
+			if (file.previewElement) {
+				file.previewElement.classList.remove("dz-file-preview");
+				let images = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
+				for (let i = 0; i < images.length; i++) {
+					let thumbnailElement = images[i];
+					thumbnailElement.alt = file.name;
+					thumbnailElement.src = dataUrl;
+					url = dataUrl;
+				}
+				setTimeout(function() { file.previewElement.classList.add("dz-image-preview"); }, 1);
 			}
-			setTimeout(function() { file.previewElement.classList.add("dz-image-preview"); }, 1);
+		},
+		success: function(file, response){
+			let res = JSON.parse(response);
+			if (res.answer == 'error') {
+				dropzoneSuccess.hide();
+				dropzoneError.text(res.error);
+				dropzoneError.show();
+				dropzone.removeFile(file);
+			}else{
+				dropzoneError.hide();
+				dropzoneSuccess.text(res.answer);
+				dropzoneSuccess.show();
+				this.defaultOptions.success(file);
+			}
+			console.log(res);
 		}
-	},
-	success: function(file, response){
-		let res = JSON.parse(response);
-		if (res.answer == 'error') {
-			dropzoneSuccess.hide();
-			dropzoneError.text(res.error);
-			dropzoneError.show();
-			dropzone.removeFile(file);
-		}else{
-			dropzoneError.hide();
-			dropzoneSuccess.text(res.answer);
-			dropzoneSuccess.show();
-			this.defaultOptions.success(file);
-		}
-		console.log(res);
-	}
+	});
 });
 
 $('input').not('input[name=agree]').on('change', function(){
@@ -104,6 +108,9 @@ $("form").submit(function() { //Change
 	let url = window.location.href;
 	let replUrl = url.replace('?', '&');
 	btnSubmit.attr("disabled", true);
+
+	dropzoneError.hide();
+	dropzoneSuccess.hide();
 
 	$.ajax({
 		type: "POST",

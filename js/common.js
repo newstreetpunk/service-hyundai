@@ -4,12 +4,12 @@ jQuery(function($) {
 	// 	$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
 	// });
 
-	if ($(window).scrollTop() > $(window).height()) {
+	if ($(window).scrollTop() > $(window).height() - 300) {
 		$('header').css('box-shadow', '0 25px 50px rgba(0,0,0, .3)');
 	}
 
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > $(window).height()) {
+		if ($(this).scrollTop() > $(window).height() - 300) {
 			$('header').css('box-shadow', '0 25px 50px rgba(0,0,0, .3)');
 			// $('.top').addClass("active");
 		} else {
