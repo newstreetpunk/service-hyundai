@@ -23,7 +23,7 @@ let dropzoneSuccess = $('.success-message');
 let uploadFields = document.querySelectorAll('#file-upload');
 
 uploadFields.forEach(function(elem){
-	let dropzone = new Dropzone(elem, {
+	dropzone = new Dropzone(elem, {
 		url: 'upload.php',
 		addRemoveLinks: true,
 		parallelUploads: 1,
@@ -140,11 +140,14 @@ $("form").submit(function() { //Change
 			});
 
 			if(res.answer == 'ok') {
-				dropzone.removeAllFiles(true);
 				th.trigger("reset");
+				$('.dz-preview').remove();
+				$('.file-upload').removeClass('dz-started');
 			}
 			btnSubmit.removeAttr("disabled");
 		}, 100);
+		
+		dropzone.removeAllFiles(true);
 
 	}).fail(function( jqXHR, textStatus ) {
 		console.log(jqXHR);
