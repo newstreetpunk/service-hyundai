@@ -25,7 +25,7 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 	&-form
 		max-width: 380px
 		width: 100%
-		background-color: rgba($white, 1)
+		background-color: rgba($white, 0.9)
 		position: absolute
 		top: 8vh
 		right: 8vw
@@ -55,6 +55,7 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 			display: inline-block
 			width: 100%
 			margin-bottom: 30px
+			background-color: transparent
 		.btn
 			display: block
 			width: 100%
@@ -101,7 +102,7 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 		&:not(.without_text):before
 			@extend %filled_obj
 			@extend %bv_hidden
-			background-color: rgba($black, .3)
+			background-color: rgba($white, .3)
 			z-index: 1
 
 		video
@@ -197,7 +198,7 @@ $height_banner_mobile: calc( 80vh - #{$height_header_mobile} )
 		top: 8vh
 		left: 8vw
 		width: 50vw
-		color: #fff
+		color: #000000
 		margin: 0
 		opacity: 0
 		z-index: 1

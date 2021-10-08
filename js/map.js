@@ -6,7 +6,7 @@ $(function() {
                 id: "map",
                 position: [53.275197,50.227754],
                 zoom: 17,
-                balloonContentHeader: '<img src="img/hyundai-logo.svg" alt="Хёндэ" style="width: 335px"><br>',
+                balloonContentHeader: '<img src="img/hyundai-logo.svg" alt="Хёндэ" style="width: 200px"><br>',
                 balloonContentBody: '<h6><b>Официальный сервисный центр "Hyundai"</b></h6> \
                                     <p>пн — вс: 8:00 — 20:00</p> \
                                     <a href="tel:+78463210000" class="dealer-phone-map d-flex align-items-center"><img src="img/icons/phone_icon.png" alt="Phone Icon" class="me-2"> +7 (846) 321-00-00</a> \
